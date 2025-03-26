@@ -33,3 +33,8 @@ button {
 button:hover {
   background-color: #005f73;
 }
+
+.logo {
+  width: 500px;  /* 10 times smaller than 150px */
+  height: auto; /* Maintains aspect ratio */
+}
