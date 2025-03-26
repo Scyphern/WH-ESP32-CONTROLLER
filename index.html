@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ESP32 MQTT Controller</title>
+  <title>WAREHOUSE HVI NAVIGATION</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>ESP32 MQTT Controller Dashboard</h1>
+  <!-- Logo Section -->
+  <header>
+    <img src="logo.png" alt="Warehouse HVI Logo" class="logo">
+  </header>
+  
+  <h1>WAREHOUSE HVI NAVIGATION</h1>
   
   <!-- Device 1 Controls -->
   <div class="device">
-    <h2>Device: ESP32 1</h2>
+    <h2>Location A</h2>
     <!-- Only one button to toggle LED blinking -->
     <button onclick="sendCommand('emqx/esp32_1', 'on')">Toggle LED</button>
   </div>
