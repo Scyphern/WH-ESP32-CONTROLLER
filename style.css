@@ -35,6 +35,6 @@ button:hover {
 }
 
 .logo {
-  width: 500px;  /* 10 times smaller than 150px */
+  width: 100px;  /* 10 times smaller than 150px */
   height: auto; /* Maintains aspect ratio */
 }
