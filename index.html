@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WAREHOUSE HVI NAVIGATION</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Logo Section -->
   <header>
     <img src="logo.png" alt="Warehouse HVI Logo" class="logo">
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
   </header>
-  
-  <h1>WAREHOUSE HVI NAVIGATION</h1>
-  <h2>By Naseem (2025)</h2>
-  
-  <!-- Device 1 Controls -->
-  <div class="device">
-    <h3>Location A</h3>
-    <!-- Only one button to toggle LED blinking -->
-    <button onclick="sendCommand('emqx/esp32_1', 'on')">Toggle Location</button>
-  </div>
-  
-  <div class="device">
-    <h3>Location B</h3>
-    <!-- Only one button to toggle LED blinking -->
-    <button onclick="sendCommand('emqx/esp32_2', 'on')">Toggle Location</button>
-  </div>
 
-  <div class="device">
-    <h3>Location C</h3>
-    <!-- Only one button to toggle LED blinking -->
-    <button onclick="sendCommand('emqx/esp32_3', 'on')">Toggle Location</button>
-  </div>
+  <main>
+    <h1>WAREHOUSE HVI NAVIGATION</h1>
+    <h2>By Naseem (2025)</h2>
 
-  <div class="device">
-    <h3>Location D</h3>
-    <!-- Only one button to toggle LED blinking -->
-    <button onclick="sendCommand('emqx/esp32_4', 'on')">Toggle Location</button>
-  </div>
-  <!-- If you have additional devices, add more sections similarly -->
-  
-  <!-- Include the MQTT client library and our custom script -->
+    <div class="devices">
+      <div class="device">
+        <h3>Location A</h3>
+        <button onclick="sendCommand('emqx/esp32_1', 'on')">Toggle Location</button>
+      </div>
+
+      <div class="device">
+        <h3>Location B</h3>
+        <button onclick="sendCommand('emqx/esp32_2', 'on')">Toggle Location</button>
+      </div>
+
+      <div class="device">
+        <h3>Location C</h3>
+        <button onclick="sendCommand('emqx/esp32_3', 'on')">Toggle Location</button>
+      </div>
+
+      <div class="device">
+        <h3>Location D</h3>
+        <button onclick="sendCommand('emqx/esp32_4', 'on')">Toggle Location</button>
+      </div>
+    </div>
+  </main>
+
   <script src="mqtt.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
